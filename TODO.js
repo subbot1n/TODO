@@ -21,31 +21,31 @@ function showList(){
     console.log("To Do:");
     for(let task in list){
         if (list[task] == "To Do") { 
-            console.log(task);
+            console.log(` "${task}" `);
             noTaskStatus = false;
             };
     }    
-    if (noTaskStatus == true) {console.log("-")};
+    if (noTaskStatus == true) {console.log(" -")};
     
     console.log("In Progress:");
     noTaskStatus = true;
     for(let task in list){
         if (list[task] == "In Progress") { 
-            console.log(task); 
+            console.log(` "${task}" `); 
             noTaskStatus = false;
         };
         }    
-    if (noTaskStatus == true) {console.log("-")};  
+    if (noTaskStatus == true) {console.log(" -")};  
 
     console.log("Done:");
     noTaskStatus = true;
     for(let task in list){
         if (list[task] == "Done") { 
-            console.log(task);
+            console.log(` "${task}" `);
             noTaskStatus = false;
          };
         }        
-
+    if (noTaskStatus == true) {console.log(" -")};
 };
 
 changeStatus("write a post", "Done");
